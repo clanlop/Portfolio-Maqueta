@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deshboard</title>
+      <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/b92f8b0b11.js" crossorigin="anonymous"></script>
+<link rel="stylesheet"type="text/css" href="assets/styles.css">
+</head>
+<header>
+<nav class="navbar navbar-expand-lg bg-secondary fixed-top">
+<div class="container-fluid">
+   <a class="navbar-brand" href="#">
+   <img src="assets/Logos/APLogo-20-20.png" alt="" width="20%" height="">
+   </a>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item"><i class="fa-brands fa-instagram fa-2xl"></i>
+        </li>
+        <li class="list-group-item"><i class="fa-brands fa-linkedin fa-2xl"></i>
+        </li>
+        <li class="list-group-item"><i class="fa-brands fa-facebook fa-2xl"></i>
+        </li>
+        <li class="list-group-item"><i class="fa-brands fa-github fa-2xl"></i>
+        </li>
+        <!-- Button trigger modal -->
+        <li class="list-group-item">
+        <i class="fa-solid fa-user fa-2xl"type="button"data-bs-toggle="modal"data-bs-target="#exampleModal">
+        </i>
+        </li>          
+    </ul>
+ </nav> 
+ <!-- Modal Usuario -->
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Usuario</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+ </div>
+  <div class="modal-body">
+      <div class="mb-3 row">
+          <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+          <input type="text" class="form-control-plaintext" id="staticEmail" value="email@ejemplo.com">
+      </div>
+      </div>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-primary"><a class="dropdown-item active" href="index.html" aria-current="true">Cerrar Sesion</a></button>
+  </div>
+  </div>
+  </div>
+  </div>
+</header>
+<body style="background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);">
+  
+  <!-- Modal sobre mi -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModal">Informacion Personal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <div class="mb-3 row">
+          <label for="formfile-sm" class="form-label">Sobre mi</label>
+        <textarea type="text" class="form-control-form-control-mb" id="sobremi"></textarea>
+        </div>  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Guardar</button>
+         </div>
+         </div>
+         </div>
+</div>
+  <!--Modal experiencias-->
+<div class="modal fade" id="experienciaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModal">Experiencia Laboral</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <div class="mb-3 row">
+        <label for="empresa" class="form-label">Empresa</label>
+        <input type="text" class="form-control-form-control-mb" id="empresa">
+        </div>
+        <div class="mb-3 row">
+        <label for="inputPuesto" class="form-label">Puesto</label>
+        <input type="text" class="form-control-form-control-mb" id="inputPuesto">
+        </div>
+        <div class="mb-3 row">
+        <label for="formfile-sm" class="form-label">Descripcion del Puesto</label>
+        <textarea type="text" class="form-control-form-control-mb" id="descripcion"></textarea>
+        </div>
+        <div class="mb-3 row">
+          <label for="inputPeriodo" class="form-label">Periodo Trabajado</label>
+          <input type="text" class="form-control-form-control-mb" id="inputPeriodo">
+        </div>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+        </div>
+        </div>
+</div>
+<!--Modal educacion-->
+<div class="modal fade" id="educacionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+      <h5 class="modal-title" id="exampleModal">Educacion</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+  <div class="mb-3 row">
+    <label for="Nivel" class="form-label">Nivel Educativo</label>
+    <input type="text" class="form-control-form-control-mb" id="Nivel">
+  </div>
+  <div class="mb-3 row">
+    <label for="institucion" class="form-label">Institucion</label>
+        <input type="text" class="form-control-form-control-mb" id="institucion">
+  </div>
+  <div class="mb-3 row"> 
+        <label for="titulo" class="form-label">Titulo</label>
+        <input type="text" class="form-control-form-control-mb" id="titulo">
+  </div>
+  <div class="mb-3 row">
+      <label for="fecha" class="form-label">Fecha de Egreso</label>
+      <input type="text" class="form-control-form-control-mb" id="fecha">
+  </div>
+  <div class="mb-3 row">
+      <label for="formfile-sm" class="form-label">Ver Titulo</label>
+      <input type="file" class="form-control-form-control-sm" id="formfile-sm">
+    </div>
+    </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary">Guardar</button>
+</div>
+</div>
+</div>
+</div>
+<!--Modal foto perfil-->
+<div class="modal fade" id="fotoPerfilModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+          <h5 class="modal-title" id="exampleModal">Foto de Perfil</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+  <div class="mb-3 row">
+  <input type="file" class="form-control-form-control-sm" id="formfile-sm">
+  </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary">Guardar</button>
+  </div>
+</div>
+</div>
+</div>
+<!--Modal Banner-->
+<div class="modal fade" id="bannerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+          <h5 class="modal-title" id="exampleModal">Banner</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  <div class="modal-body">
+  <div class="mb-3 row">
+    <input type="file" class="form-control-form-control-sm" id="formfile-sm">
+    </div>
+    </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary">Guardar</button>
+  </div>
+</div>
+</div>
+</div>
+<!--Modal Proyectos-->
+<div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+  <h5 class="modal-title" id="exampleModal">Proyectos</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-primary">Guardar</button>
+  </div>
+</div>
+</div>
+</div>
+<!--Modal referencias-->
+<div class="modal fade" id="referenciasModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModal">Referencias</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+  <div class="modal-body">
+  <div class="mb-3 row">
+  <textarea type="text" class="form-control-form-control-mb" id="descripcion"></textarea>
+  </div>
+  
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-primary">Guardar</button>
+  </div>
+</div>
+</div>
+</div>
+<!--Modal Habilidades-->
+<div class="modal fade" id="habilidadesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+          <h5 class="modal-title" id="exampleModal">Habilidades</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  <div class="modal-body">
+  <div class="mb-3 row">
+  </div>
+  <div class="mb-3 row">
+  </div>
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-primary">Guardar</button>
+  </div>
+</div>
+</div>
+</div>
+<!--Modal otro-->
+<div class="modal fade" id="otroModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+  <h5 class="modal-title" id="exampleModal">Otro</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+  <div class="mb-3 row">
+  </div>
+  <div class="mb-3 row">
+  </div>
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-primary">Guardar</button>
+  </div>
+</div>
+</div>
+</div>
+<!--iconos-->
+<section id="deshboard"class="deshboard">
+    
+        <div class="container justify-content-center d-flex">
+        <div class="container text-center">
+        <div class="row mt-5 g-2 g-lg-3">
+        <!--boton edicion sobre mi-->
+          <div class="col">
+          <div class="dropend">
+            <button class="btn btn-primary btn-lg p-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user-pen"></i>
+            </button>
+              <ul class="dropdown-menu">
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#infoModal">Modificar <i class="fa-solid fa-pen"></i> </a></li>
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#infoModal">Agregar <i class="fa-solid fa-floppy-disk"></i></a></li>
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#infoModal">Eliminar  <i class="fa-solid fa-trash"></i></a></li>
+            </ul>
+          </div>
+          </div>
+          <!--botn edicion educacion-->
+          <div class="col">
+            <div class="dropend">
+            <button class="btn btn-primary btn-lg p-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-graduation-cap lock fa-2xl"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#educacionModal">Modificar <i class="fa-solid fa-pen"></i> </a></li>
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#educacionModal">Agregar <i class="fa-solid fa-floppy-disk"></i></a></li>
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#educacionModal">Eliminar  <i class="fa-solid fa-trash"></i></a></li>
+            </ul>
+          </div>
+          </div>
+        <!--boton edicion experiencia laboral-->
+          <div class="col">
+          <div class="dropend">
+          <button class="btn btn-primary btn-lg p-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-briefcase lock fa-2xl"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#experienciaModal">Modificar  <i class="fa-solid fa-pen"></i> </a></li>
+            <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#experienciaModal">Agregar  <i class="fa-solid fa-floppy-disk"></i></a></li>
+            <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#experienciaModal">Eliminar  <i class="fa-solid fa-trash"></i></a></li>
+          </ul>
+        </div>
+          </div>
+          </div>
+        
+        <div class="container text-center">
+        <div class="row mt-5 g-2 g-lg-3">
+          <!--boton edicion foto perfil-->
+        <div class="col">
+          <div class="dropend">
+            <button class="btn btn-primary btn-lg p-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-image-portrait fa-2xl"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#fotoPerfilModal">Modificar <i class="fa-solid fa-pen"></i> </a></li>
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#fotoPerfilModal">Eliminar  <i class="fa-solid fa-trash"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!--boton edicion imagen de banner-->
+        <div class="col">
+          <div class="dropend">
+            <button class="btn btn-primary btn-lg p-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-image fa-2xl"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#bannerModal">Modificar <i class="fa-solid fa-pen"></i> </a></li>
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#bannerModal">Eliminar  <i class="fa-solid fa-trash"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!--boton edicion proyectos-->
+        <div class="col">
+          <div class="dropend">
+            <button class="btn btn-primary btn-lg p-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-folder fa-2xl"></i>
+            </button>
+              <ul class="dropdown-menu">
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#proyectosModal">Modificar <i class="fa-solid fa-pen"></i> </a></li>
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#proyectosModal">Agregar  <i class="fa-solid fa-floppy-disk"></i></a></li>
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#proyectosModal">Eliminar  <i class="fa-solid fa-trash"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        <div class="container text-center">
+        <div class="row mt-5 g-2 g-lg-3">
+           <!--boton edicion referencias-->
+        <div class="col">
+          <div class="dropend">
+            <button class="btn btn-primary btn-lg p-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-comment fa-2xl"></i>
+            </button>
+              <ul class="dropdown-menu">
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#referenciasModal">Modificar <i class="fa-solid fa-pen"></i> </a></li>
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#referenciasModal">Agregar  <i class="fa-solid fa-floppy-disk"></i></a></li>
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#referenciasModal">Eliminar  <i class="fa-solid fa-trash"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!--boton edicion habilidades-->
+        <div class="col">
+          <div class="dropend">
+            <button class="btn btn-primary btn-lg p-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-dumbbell fa-2xl"></i>
+            </button>
+              <ul class="dropdown-menu">
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#habilidadesModal">Modificar <i class="fa-solid fa-pen"></i> </a></li>
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#habilidadesModal">Agregar  <i class="fa-solid fa-floppy-disk"></i></a></li>
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#habilidadesModal">Eliminar  <i class="fa-solid fa-trash"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!--boton edicion otros-->
+        <div class="col">
+        <div class="dropend">
+            <button class="btn btn-primary btn-lg p-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-duotone fa-plus fa-2xl"></i>
+            </button>
+              <ul class="dropdown-menu">
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#otroModal">Modificar <i class="fa-solid fa-pen"></i> </a></li>
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#otroModal">Agregar  <i class="fa-solid fa-floppy-disk"></i></a></li>
+              <li><a class="dropdown-item" type="button"data-bs-toggle="modal"data-bs-target="#otroModal">Eliminar  <i class="fa-solid fa-trash"></i></a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+</section>
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>    
+</body>
+</html>
