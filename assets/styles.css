@@ -1,29 +1,38 @@
 /*navegador*/
 .navbar.navbar-expand-lg.bg-secondary.fixed-top{
  
- background-image: radial-gradient( circle farthest-corner at 10% 20%,  #38cfbf 0%, #0a4693 90.2% );
-}
-/*redes*/
-i.fa-brands.fa-facebook.fa-2xl:hover{
-    color:rgb(0, 89, 255);
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  #38cfbf 0%, #0a4693 90.2% );
+   }
+   /*redes*/
+   :root{
+    --bs-link-color:rgb(0,0,0) ;
+   }
+   
+   i.fa-brands.fa-facebook.fa-2xl:hover{
+       color:rgb(0, 89, 255);
+       
+       }
+   i.fa-brands.fa-linkedin.fa-2xl:hover{
+       color:rgb(0, 183, 255);
+       }
+    i.fa-solid.fa-user-lock.fa-2xl:hover{
+       color:rgba(255, 153, 0, 0.836);
     
-    }
-i.fa-brands.fa-linkedin.fa-2xl:hover{
-    color:rgb(0, 183, 255);
-    }
- i.fa-solid.fa-user-lock.fa-2xl:hover{
-    color:rgba(255, 153, 0, 0.836);
- 
-        }
-i.fa-solid.fa-user.fa-2xl:hover{
-    color:rgba(0, 255, 64, 0.712);
-            }    
-i.fa-brands.fa-instagram.fa-2xl:hover{
-    color:rgb(195, 0, 255);
-}
-i.fa-brands.fa-github.fa-2xl:hover{
-    color:rgb(111, 0, 255);
-}
+           }
+   i.fa-solid.fa-user.fa-2xl:hover{
+       color:rgba(0, 255, 64, 0.712);
+               }    
+   i.fa-brands.fa-instagram.fa-2xl:hover{
+       color:rgb(195, 0, 255);
+   }
+   i.fa-brands.fa-github.fa-2xl:hover{
+       color:rgb(111, 0, 255);
+   }
+
+   .list-group{
+    --bs-list-group-bg:transparent;
+    --bs-list-group-border-width:0;   
+   }
 /*banner*/
 section.banner{
    background-image:url(../assets/imagenes/banner3.jpg);
@@ -36,24 +45,41 @@ section.banner{
 
 /*foto perfil*/ 
 img.rounded-circle.w-25{
-    position: absolute;
+    position:absolute;
      z-index: 1;
      width:10rem !important;
      height: auto;
      margin-top:-18rem;
-     margin-left:2rem;
+     margin-left:-4rem;
      box-shadow: 4px 0px 10px  rgba(214, 219, 236, 0.856);
 }
+#sobre-mi{
+    margin-top:42rem ;
+    color: ghostwhite;
+}
+
 /*margenes*/
- h1.mt-9{
-    margin-top:40rem;
- }  
 h3.mt-8{
     margin-top:45rem;
     font-size: 48;
     background: -webkit-linear-gradient(40deg, #09009f,#00ff95 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width:412px){
+    img.rounded-circle.w-25{
+        margin-top: -15rem;
+        margin-left:-5rem ;
+        width:8rem !important;
+    }
+    h3.mt-8{
+        margin-top: 20rem;
+    }
+    #sobre-mi{
+        margin-top: 2rem;
+        color: white;
+    }
+    
 }
 iframe.titulos{
     margin-left: 14rem ;
@@ -62,42 +88,39 @@ section.deshboard{
      margin-top: 4.5rem;
      min-height: 100vh;
 }
-.list-group{
-    --bs-list-group-bg:transparent;
-    --bs-list-group-border-width:0;
-}
-/*Fondos*/
- section.educacion,section.habilidades{
-    background-color: #74EBD5;
-    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
-   }
-   section.experiencia,section.proyectos{
-    background-image: radial-gradient( circle farthest-corner at 0.5% 97.2%,  #3e86d3 0%, #93c4ff 100.2% );
-}
 
-   #col-3Edu{
-    background-image: url(../assets/imagenes/graduacion.jpg);
+
+/*Fondos*/
+ 
+   .experiencia{
+    background-image:url(../assets/imagenes/imgPuente2.png);
+
+    background-position: center;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    color:white;
+    text-align: center;
+    }
+    
+    
+
+   section.educacion{
+    background-image:url(../assets/imagenes/graduacion.jpg);
     background-repeat:no-repeat ;
     background-size:cover;
     background-position:center ;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px 10px inset rgba(103, 149, 209, 0.856);
-}
+    filter:brightness(60%);
+    color:white
+
+    }
 
  
-    #col-3Proyectos{
-    background-image: url(../assets/imagenes/imgTrabajo.jpg);
+    section.proyectos{
+    background-image:url(../assets/imagenes/imgTrabajo.jpg);
     background-repeat:no-repeat ;
-    background-size:cover; 
-    border-radius: 20px; 
-    box-shadow: 0px 0px 10px 10px inset rgba(103, 149, 209, 0.856);
-
-}
-    #col-3Expe{
-    background-image: url(../assets/imagenes/imgPuente1.jpg);
-    background-repeat:no-repeat ;
-    background-size: cover;
-    background-position:top ;
-    border-radius: 20px; 
-    box-shadow: 0px 0px 10px 10px inset rgba(103, 149, 209, 0.856);
+    background-size:cover;
+    background-position:center ; 
+    border-radius: 20px 20px 0px 0px; 
+    box-shadow: 0px 0px 10px 10px  inset rgba(103, 149, 209, 0.856);
+    color: white;
 }
